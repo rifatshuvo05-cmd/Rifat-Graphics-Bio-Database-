@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rifat Shuvo | Portfolio</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet"><style>
+:root{
+  --bg:#050508;
+  --card:rgba(255,255,255,0.04);
+  --text:#ffffff;
+  --accent:#00f7ff;
+  --accent2:#00ff88;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+
+#particles{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+}
+
+.hero{
+  text-align:center;
+  padding:90px 20px 30px;
+}
+
+.hero img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  border:3px solid var(--accent);
+  box-shadow:0 0 20px var(--accent);
+  object-fit:cover;
+  cursor:pointer;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  background:linear-gradient(45deg,#00f7ff,#ff00ff,#00ff88);
+  background-size:300% 300%;
+  animation:gradientMove 4s ease infinite;
+  color:#000;
+  font-weight:bold;
+  margin-top:10px;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:2.9rem;
+  margin-top:10px;
+  background:linear-gradient(90deg,#00f7ff,#ff00ff,#00ff88,#00f7ff);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.typing{color:var(--accent2);min-height:25px;}
+.clock{margin-top:5px;opacity:0.8;}
+
+.whatsapp{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 22px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#25D366,var(--accent));
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+  animation:pulse 1.6s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+.container{width:92%;max-width:1100px;margin:auto;padding:20px;}
+
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:18px;
+  margin:15px 0;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+}
+
+.section-title{
+  color:var(--accent);
+  border-left:4px solid var(--accent);
+  padding-left:10px;
+  margin-bottom:10px;
+}
+
+.progress{height:8px;background:#111;border-radius:10px;overflow:hidden;margin:6px 0 12px;}
+.bar{height:100%;background:var(--accent);}
+
+footer{text-align:center;padding:20px;opacity:0.7;}
+
+.controls{
+  position:fixed;
+  top:15px;
+  right:15px;
+  display:flex;
+  gap:10px;
+  z-index:999;
+}
+
+select{
+  padding:8px;
+  border-radius:10px;
+  border:1px solid var(--accent);
+  background:rgba(0,0,0,0.4);
+  color:var(--text);
+  cursor:pointer;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.modal img{max-width:90%;max-height:90%;border-radius:20px;}
+.close{position:absolute;top:20px;right:30px;font-size:40px;color:#fff;cursor:pointer;}
+</style></head>
+<body><canvas id="particles"></canvas>
+
+<div class="controls">
+  <select onchange="setBackground(this.value)">
+    <option value="matrix">Matrix</option>
+    <option value="galaxy">Galaxy</option>
+    <option value="rain">Rain</option>
+    <option value="neon">Neon</option>
+    <option value="solar">NASA Solar System</option>
+    <option value="space3d">3D Space</option>
+  </select>
+</div><div class="hero">
+  <img src="https://i.ibb.co/4pDNDk1/avatar.png" onclick="openModal(this.src)">  <div class="badge">PRO FREELANCER</div>  <h1>MD Rifat Hossen Shuvo</h1>  <div class="typing" id="typing"></div>
+  <div class="clock" id="clock"></div>
+  <a class="whatsapp" href="https://wa.me/8801734721518" target="_blank">WhatsApp Chat</a>
+</div><div class="container"><div class="card">
+<h2 class="section-title">👤 Personal Information</h2>
+<p><b>Name:</b> MD Rifat Hossen Shuvo</p>
+<p><b>Father’s Name:</b> MD Nosrul Islam</p>
+<p><b>Mother’s Name:</b> Mst Halima Khatun</p>
+<p><b>Date of Birth:</b> 25 December 2008</p>
+<p><b>Address:</b> Kazipur, Sirajganj, Rajshahi, Bangladesh</p>
+<p><b>Mobile Number:</b> 01734721518</p>
+<p><b>Email:</b> rifatshuvo05@gmail.com</p>
+<p><b>Nationality:</b> Bangladeshi</p>
+</div><div class="card">
+<h2 class="section-title">🎓 Educational Qualification</h2>
+<p><b>HSC (Running)</b></p>
+<p>College Name: Rafatullah Ifaz Uddin Memorial Degree College</p>
+<p>Group: Humanities</p>
+<p>Expected Year: 2026</p>
+<br>
+<p><b>SSC</b></p>
+<p>School Name: Gandhail RatanKandi Union Ali Ahmed High School</p>
+<p>Group: Humanities</p>
+<p>Result: GPA 5.00</p>
+<p>Passing Year: 2024</p>
+</div><div class="card">
+<h2 class="section-title">💡 Skills</h2>
+<p>Basic Computer Knowledge (MS Word, Internet)</p>
+<div class="progress"><div class="bar" style="width:85%"></div></div>
+<p>Graphics Designer</p>
+<div class="progress"><div class="bar" style="width:80%"></div></div>
+<p>Social Media Worker</p>
+<div class="progress"><div class="bar" style="width:75%"></div></div>
+</div><div class="card">
+<h2 class="section-title">🌐 Language Proficiency</h2>
+<p>Bangla: Fluent</p>
+<p>English: Basic/Intermediate</p>
+</div><div class="card">
+<h2 class="section-title">📌 Personal Details</h2>
+<p>Marital Status: Unmarried</p>
+<p>Religion: Islam</p>
+<p>Blood Group: A+</p>
+</div></div><footer>© 2026 Rifat Shuvo</footer><div class="modal" id="modal">
+  <span class="close" onclick="closeModal()">×</span>
+  <img id="modalImg">
+</div><script>
+const canvas=document.getElementById("particles");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let mode="matrix";
+let stars=[];
+let angle=0;
+
+for(let i=0;i<400;i++){
+  stars.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    z:Math.random()*canvas.width
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  if(mode=="solar") drawNASA();
+  else if(mode=="space3d") drawSpace3D();
+  else drawStars();
+
+  requestAnimationFrame(draw);
+}
+
+function drawStars(){
+  let color="#00ffcc";
+  if(mode=="galaxy") color="#7c3aed";
+  if(mode=="rain") color="#00f7ff";
+  if(mode=="neon") color="#ff00ff";
+
+  ctx.fillStyle=color;
+  stars.forEach(s=>{
+    s.y+=1.5;
+    if(s.y>canvas.height)s.y=0;
+    ctx.fillRect(s.x,s.y,2,2);
+  });
+}
+
+function drawSpace3D(){
+  const cx=canvas.width/2;
+  const cy=canvas.height/2;
+
+  ctx.fillStyle="#fff";
+  stars.forEach(s=>{
+    s.z-=4;
+    if(s.z<=0) s.z=canvas.width;
+
+    let k=128/s.z;
+    let x=(s.x-cx)*k+cx;
+    let y=(s.y-cy)*k+cy;
+
+    if(x>=0 && x<canvas.width && y>=0 && y<canvas.height){
+      ctx.fillRect(x,y,2*k,2*k);
+    }
+  });
+
+  angle+=0.02;
+  let sx=cx+Math.cos(angle)*160;
+  let sy=cy+Math.sin(angle)*120;
+
+  ctx.fillStyle="#00f7ff";
+  ctx.beginPath();
+  ctx.arc(sx,sy,5,0,Math.PI*2);
+  ctx.fill();
+}
+
+// 🌌 NASA STYLE SOLAR SYSTEM
+function drawNASA(){
+  const cx=canvas.width/2;
+  const cy=canvas.height/2;
+
+  // sun glow
+  let grd=ctx.createRadialGradient(cx,cy,10,cx,cy,80);
+  grd.addColorStop(0,"#fff700");
+  grd.addColorStop(1,"rgba(255,200,0,0)");
+
+  ctx.fillStyle=grd;
+  ctx.beginPath();
+  ctx.arc(cx,cy,60,0,Math.PI*2);
+  ctx.fill();
+
+  let planets=[
+    {r:90,s:0.03,c:"#aaa",size:4},
+    {r:130,s:0.02,c:"#00f7ff",size:6},
+    {r:170,s:0.015,c:"#ff00ff",size:7},
+    {r:210,s:0.01,c:"#00ff88",size:5}
+  ];
+
+  planets.forEach(p=>{
+    let a=angle*p.s*100;
+
+    let x=cx+Math.cos(a)*p.r;
+    let y=cy+Math.sin(a)*p.r*0.6; // ellipse orbit (NASA feel)
+
+    ctx.fillStyle=p.c;
+    ctx.beginPath();
+    ctx.arc(x,y,p.size,0,Math.PI*2);
+    ctx.fill();
+  });
+
+  angle+=0.01;
+}
+
+draw();
+
+function setBackground(v){mode=v;}
+
+setInterval(()=>{
+  document.getElementById('clock').innerText=new Date().toLocaleTimeString();
+},1000);
+
+const text="Freelancer | Designer | Creator";
+let i=0;
+function type(){
+  if(i<text.length){
+    document.getElementById('typing').innerHTML+=text[i++];
+    setTimeout(type,60);
+  }
+}
+type();
+
+function openModal(src){
+  document.getElementById('modal').style.display='flex';
+  document.getElementById('modalImg').src=src;
+}
+function closeModal(){
+  document.getElementById('modal').style.display='none';
+}
+</script></body>
+</html>
